@@ -6,7 +6,7 @@ public class Main {
         Integer integer1 = new Integer(1);
         Integer integer2 = new Integer(1);
 
-        if (integer1.equals(integer2)) System.out.println("равны");
+        if (integer1 == integer2) System.out.println("равны");
         else System.out.println("не равны");
 
         int integerUnbox1 = integer1;
