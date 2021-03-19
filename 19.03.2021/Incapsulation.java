@@ -30,15 +30,10 @@ class Pupil {
         this.classLetter = classLetter;
         for (int i = 0; i < marks.length; i++) {
             if (marks[i] < 2 || marks[i] > 5) {
-                MyExcept();
+                throw new IllegalArgumentException("Wrong type  :( ");
             }
         }
         this.marks = marks;
-    }
-    public void MyExcept() throws IllegalArgumentException {
-
-        throw new IllegalArgumentException("Wrong type  :( ");
-
     }
 
     public String getFio() {
@@ -72,7 +67,7 @@ class Pupil {
     public void setMarks(int[] marks) {
         for (int i = 0; i < marks.length; i++) {
             if (marks[i] < 2 || marks[i] > 5) {
-                MyExcept();
+                throw new IllegalArgumentException("Wrong type  :( ");
             }
         }
         this.marks = Arrays.copyOf(marks, marks.length);
