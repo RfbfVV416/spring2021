@@ -9,19 +9,19 @@ public class Main {
     }
 }
 class Pupil {
-    String Fio;
+    String fio;
     int classNum;
     char classLetter;
 
-    Pupil(String Fio){
-        this.Fio = Fio;
+    Pupil(String fio){
+        this.fio = fio;
     }
-    Pupil (String Fio, int classNum){
-        this(Fio);
+    Pupil (String fio, int classNum){
+        this(fio);
         this.classNum = classNum;
     }
-    Pupil (String Fio, int classNum, char classLetter){
-        this(Fio, classNum);
+    Pupil (String fio, int classNum, char classLetter){
+        this(fio, classNum);
         this.classLetter = classLetter;
     }
 }
