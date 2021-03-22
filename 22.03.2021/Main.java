@@ -4,11 +4,10 @@ public class Main {
 
     public static void main(String[] args) {
 	Triangle triangle = new Triangle();
-	System.out.println(triangle.numOfCorners);
-	System.out.println(triangle.shape);
+	Figure figure = new Figure();
 
-	triangle.setShape("triangle");
-	triangle.setNumOfCorners(3);
+	System.out.println(figure.getShape());
+	System.out.println(figure.getNumOfCorners());
 
 	System.out.println(triangle.getShape());
 	System.out.println(triangle.getNumOfCorners());
