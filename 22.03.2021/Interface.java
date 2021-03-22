@@ -30,6 +30,18 @@ class Plane implements Movable{
     }
 }
 
+class ElectricCar extends Car{
+    @Override
+    public void move(){
+        System.out.println("Electric car is riding");
+    }
+
+    @Override
+    public void fill(){
+        System.out.println("You filled up the electric car");
+    }
+}
+
 
 
 
