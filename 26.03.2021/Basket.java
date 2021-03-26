@@ -7,6 +7,9 @@ public class Main {
 
     public static void main(String[] args) {
      Apple [] a = new Apple[3];
+        for(int i = 0; i < a.length; i++){
+            a[i] = new Apple();
+        }
      Basket basket = new Basket(a);
      System.out.println(basket.calculateBasketItems());
 
