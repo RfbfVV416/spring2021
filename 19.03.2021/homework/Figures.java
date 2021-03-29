@@ -8,17 +8,17 @@ public class Main {
 }
 
 class Figure{
-    protected double figureShape;
+    protected String figureShape;
     protected double s;
 
-    Figure(double figureShape){
+    Figure(String figureShape){
         this.figureShape = figureShape;
     }
 
-    public double getFigureShape() {
+    public String getFigureShape() {
         return figureShape;
     }
-    public void setFigureShape(double figureShape) {
+    public void setFigureShape(String figureShape) {
         this.figureShape = figureShape;
     }
 
@@ -37,7 +37,7 @@ class Triangle extends Figure{
     int height;
     int base;
 
-    Triangle(double figureShape, int height, int base){
+    Triangle(String figureShape, int height, int base){
         super(figureShape);
         this.height = height;
         this.base = base;
@@ -52,7 +52,7 @@ class Triangle extends Figure{
 class Rectangular extends Figure{
     int a;
     int b;
-    Rectangular(double figureShape, int a, int b){
+    Rectangular(String figureShape, int a, int b){
         super(figureShape);
         this.a = a;
         this.b = b;
@@ -67,7 +67,7 @@ class Rectangular extends Figure{
 
 class Square extends Figure{
     int a;
-    Square(double figureShape, int a){
+    Square(String figureShape, int a){
         super(figureShape);
         this.a = a;
     }
@@ -80,7 +80,7 @@ class Square extends Figure{
 
 class Circle extends Figure{
     int r;
-    Circle(double figureShape, int r){
+    Circle(String figureShape, int r){
         super(figureShape);
         this.r = r;
     }
