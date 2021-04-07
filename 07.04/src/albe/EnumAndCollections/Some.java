@@ -9,8 +9,9 @@ public enum Some {
     SET(new HashSet());
 
 
-    private Collection collection;
-    private Some(Collection collection){
+    private Collection<Element> collection;
+
+    Some(Collection<Element> collection) {
         this.collection = collection;
     }
 }
