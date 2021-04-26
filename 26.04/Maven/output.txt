@@ -1,0 +1,1 @@
+{"name":"Murka","age":[1,2,3],"weight":{"f15b0da5-f15a-4cab-a6ba-f5021efcb19e":2,"233e9285-39a9-4539-b0cc-1178e3663b03":1}}
