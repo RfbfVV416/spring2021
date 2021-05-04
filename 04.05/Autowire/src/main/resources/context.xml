@@ -12,7 +12,8 @@
         http://www.springframework.org/schema/context/spring-util-3.2.xsd">
 
 
-    <bean class="albe.Dog" id="b"/>
-    <bean class="albe.Owner" id="a" autowire="constructor"/>
+    <context:annotation-config/>
+    <context:component-scan base-package="albe"/>
+
 
 </beans>
