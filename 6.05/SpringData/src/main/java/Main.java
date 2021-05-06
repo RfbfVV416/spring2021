@@ -1,11 +1,8 @@
 
-import org.postgresql.*;
-import org.postgresql.Driver;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Properties;
-import java.util.logging.Logger;
+
 
 public class Main {
 
@@ -22,7 +19,7 @@ public class Main {
             while (resultSet.next()) {
 
                 long id = resultSet.getLong("id");
-                String name = resultSet.getString("name");
+                String name = resultSet.getString("username");
 
                 User obj = new User();
                 obj.setId(id);
@@ -43,6 +40,6 @@ public class Main {
 
     public static Connection getConnection() throws Exception {
 
-        return DriverManager.getConnection("jdbc:postgresql://localhost:5432/bd", "bebes", "2812tyHx_8");
+        return DriverManager.getConnection("jdbc:postgresql://localhost:5432/db", "postgres", "2812tyHx_8");
     }
 }
