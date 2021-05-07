@@ -14,7 +14,15 @@ public class NotNullBeanPostProcessor implements BeanPostProcessor {
             for (Field field: fields){
                 if (field.isAnnotationPresent(NotNegative.class) && field.getFloat(bean) < 0){
                     try{
-                        return new MagazineRating(Math.abs(field.getFloat(bean)));
+                        return new MagazineRating(Math.abs(field.getFloat(bean)), "some description");
+                    }
+                    catch (IllegalAccessException ex){
+                        ex.printStackTrace();
+                    }
+                }
+                if (field.isAnnotationPresent(NotNull.class)){
+                    try{
+                        return new MagazineRating(field.getFloat(bean), "some description");
                     }
                     catch (IllegalAccessException ex){
                         ex.printStackTrace();
