@@ -4,6 +4,7 @@ import java.util.Observable;
 import java.util.Observer;
 
 public class Phone implements Observer {
+    Version version;
     @Override
     public int hashCode(){
         return super.hashCode();
@@ -19,8 +20,13 @@ public class Phone implements Observer {
     public void update(Observable o, Object arg) {
         new Thread(() -> {
             System.out.println("Phone version updated");
+            try{
+                this.version = (Version)arg;
+            }
+            catch(ClassCastException ex){
+                ex.printStackTrace();
+            }
 
         }).start();
-        System.out.println("Phone version updated");
     }
 }
